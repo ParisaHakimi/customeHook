@@ -1,10 +1,7 @@
 import "./App.css";
-import { useState } from "react";
+import useForm from "./useForm";
 function App() {
-  const [fields, setFields] = useState({ text: "ali", email: 10 });
-  const changeHandler = (e) => {
-    setFields({ [e.target.name]: e.target.value });
-  };
+  const { fields, changeHandler } = useForm({ text: "", email: "" });
   return (
     <div className="app">
       <input
